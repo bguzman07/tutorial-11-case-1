@@ -51,10 +51,10 @@ function lightstars(e) {
    var starNumber = e.target.alt;
    var stars = document.querySelectorAll("span#stars img");
    for (var i = 0; i < starNumber; i++) {
-      stars[i].src="../images/bw_star2.png";
+      stars[i].src="./images/bw_star2.png";
    }
    for (var i = starNumber; i > stars.length; i--) {
-      stars[i].src="../images/bw_star.png";
+      stars[i].src="./images/bw_star.png";
    }
    document.getElementById("rating").value = starNumber + " stars";
    e.target.addEventListener("mouseleave", turnOffStars);
@@ -67,7 +67,7 @@ function lightstars(e) {
 function turnOffStars(e) {
    var stars = document.querySelectorAll("span#stars img");
    for (var i = 0; i < stars.length; i++) {
-      stars[i].src="../images/bw_star.png";
+      stars[i].src="./images/bw_star.png";
    }
    document.getElementById("rating").value = "";
 }
